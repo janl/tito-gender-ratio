@@ -1,0 +1,9 @@
+{
+  "import": [
+    "iconv -f UTF-16le -t UTF-8",
+    "csv-parser",
+    "jsonfilter \"Ticket First Name\"",
+    "genderize",
+    "category-count gender"
+  ]
+}

@@ -11,6 +11,7 @@ identification of a person.
 Download the participants list as CSV from [ti.to](https://ti.to/home),
 in the exampels referred to as `tito-raw.csv`.
 
+You can install this with `npm install tito-gender-ratio`.
 
 ## Gasket
 

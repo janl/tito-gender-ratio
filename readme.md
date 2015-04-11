@@ -11,25 +11,20 @@ identification of a person.
 Download the participants list as CSV from [ti.to](https://ti.to/home),
 in the exampels referred to as `tito-raw.csv`.
 
-You can install this with `npm install tito-gender-ratio`.
+You can install this with `npm install tito-gender-ratio -g`.
 
-## Gasket
+# Global
 
-Use [gasket](https://www.npmjs.org/package/gasket) to run the pipeline:
-
+You can run
+```sh
+tito-gender-ratio < tito-raw.csv
 ```
-gasket run import < tito-raw.csv
-```
-Example output
-```
-{"female":8,"male":19,"missing":5}
-```
+It will print a percentage.
 
 ## Shell
 
 Or use the components yourself:
 
 ```sh
-iconv -f UTF-16le -t UTF-8 tito-raw.csv > tito.csv
-csv-parser < tito.csv | jsonfilter "Ticket First Name" | genderize | category-count gender
+csv-parser < tito.csv | jsonfilter "Ticket First Name" | genderize | category-count gender | ndjson-format '${Math.round(this.female / (this.male + this.female + this.missing) * 100)}%'
 ```

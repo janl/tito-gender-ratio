@@ -12,5 +12,8 @@ process.stdin
   .pipe(ndjson.parse())
   .pipe(genderize.stream())
   .pipe(count('gender', function (r) {
-    console.log(`${Math.round(r.female / (r.male + r.female + r.missing) * 100)}%`)
+    r.female = r.female || 0
+    r.male = r.male || 0
+    r.missing = r.missing || 0
+    console.log(Math.round(r.female / (r.male + r.female + r.missing) * 100) +'%')
   }))

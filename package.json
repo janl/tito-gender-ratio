@@ -4,8 +4,7 @@
   "description": "Guess the gender ratio of your tito event by ticket names",
   "bin": "./cli.js",
   "scripts": {
-    "start": "gasket run import",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./cli.js < tito.csv"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,6 @@
     "csv-parser": "^1.4.6",
     "genderize": "^1.5.0",
     "jsonfilter": "^1.1.2",
-    "ndjson": "^1.3.0",
-    "ndjson-format": "^1.0.0"
+    "ndjson": "^1.3.0"
   }
 }

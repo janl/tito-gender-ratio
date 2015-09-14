@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/finnp/tito-gender-ratio",
   "dependencies": {
-    "JSONStream": "^1.0.4",
     "category-count-stream": "^1.0.0",
     "csv-parser": "^1.4.6",
     "genderize": "^1.5.0",

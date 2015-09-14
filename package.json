@@ -1,6 +1,6 @@
 {
   "name": "tito-gender-ratio",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Guess the gender ratio of your tito event by ticket names",
   "bin": "./cli.js",
   "scripts": {

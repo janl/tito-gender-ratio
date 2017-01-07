@@ -23,7 +23,7 @@
   "dependencies": {
     "category-count-stream": "^1.0.0",
     "csv-parser": "^1.4.6",
-    "genderize": "^1.5.0",
+    "genderize": "^1.5.2",
     "jsonfilter": "^1.1.2",
     "ndjson": "^1.3.0",
     "tito-api": "^1.0.0"
